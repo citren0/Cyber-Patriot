@@ -20,7 +20,8 @@ def setPassword(userName:str, password:str):
 #My section
 command = os.popen('awk -F: \'($3>=1000)&&($1!="nobody"){print $1}\' /etc/passwd') #UID should be greater than 1000
 userList = command.read().split()
-passwrd = input('What password should be applied? ')
+print('What password should be applied? ')
+passwrd = input()
 print("Do you want to change the password of: \n", passwrd, "\n to ", userList, "?")
 choice1 = input()
 if not 'y' in choice1.lower():

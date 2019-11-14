@@ -34,7 +34,8 @@ print('\nUnauthorized users:', unauthedUsers, '\n')
 if not unauthedUsers:
 	exit('No unauthorized users found. Exiting.')
 
-yesorno = input('Would you like to remove these unauthorized users? (y/n)')
+print('Would you like to remove these unauthorized users? (y/n)')
+yesorno = input()
 
 if yesorno == 'y' or yesorno == 'Y':
 	print('Removing users...')
