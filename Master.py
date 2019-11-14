@@ -52,9 +52,9 @@ print("2. View Checklist")
 print("3. Quit")
 choice1 = input("What would you like to do? ")
 
-if choice1.toString() == "1":
+if choice1() == "1":
 	scriptRun()
-elif choice1.toString() == "2":
+elif choice1 == "2":
         checklist()
 else:
         exit("Exiting.")
