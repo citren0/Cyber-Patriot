@@ -26,6 +26,8 @@ def scriptRun():
                                 command = os.popen('sudo bash ' + currentCom)
                                 command2 = command.read()
                                 print(command2)
+                        else:
+                            continue
 
 
 def checklist():
