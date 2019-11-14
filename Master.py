@@ -22,12 +22,12 @@ def scriptRun():
                                 continue
                         elif 'py' in currentCom:
                                 command = os.popen('sudo python3 ' + currentCom)
-                                command2 = command.read()
                                 print(command2)
+                                command2 = command.read()
                         elif 'sh' in currentCom:
                                 command = os.popen('sudo bash ' + currentCom)
-                                command2 = command.read()
                                 print(command2)
+                                command2 = command.read()
                         else:
                             continue
 
