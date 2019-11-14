@@ -2,7 +2,7 @@ import os
 from sys import platform
 
 #Perform Checks for OS and UID
-elif platform == "win32":
+if platform == "win32":
     #Script is not made to run on Windows.
     exit("This script is not made for windows and only for Linux use. Exiting.")
 if not os.geteuid() == 0:
