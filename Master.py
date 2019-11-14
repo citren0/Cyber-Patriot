@@ -18,7 +18,9 @@ def scriptRun():
         if 'y' in yorn.lower():
                 print('Running:')
                 for currentCom in list:
-                        if 'py' in currentCom:
+                        if 'Master' in currentCom:
+                                continue
+                        elif 'py' in currentCom:
                                 command = os.popen('sudo python3 ' + currentCom)
                                 command2 = command.read()
                                 print(command2)
