@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 if not os.geteuid() == 0:
     exit("\nOnly root can run this script\n")
@@ -6,10 +7,7 @@ if not os.geteuid() == 0:
 def remUsers(usersDel):
 	print('Removing Users...')
 	for iduser in usersDel:
-		fullCommand = 'deluser ' + iduser
-		command2 = os.popen(fullCommand)
-		result = command2.read()
-		print(result, "\n")
+		print(subprocess.run('deluser ' + iduser), "\n")
 #Function which removes users from the system based on the array which is input.
 
 command = os.popen('awk -F: \'($3>=1000)&&($1!="nobody"){print $1}\' /etc/passwd')
